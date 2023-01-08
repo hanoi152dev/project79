@@ -125,7 +125,7 @@ data.on('value', (snapshot) => {
 	var quahan2=parseInt(childData.songay);
 	var quahan3=childData.hoanthanh;
 	quahan1.setDate(quahan1.getDate()+quahan2);
-	if(daysDifference(quahan1,today)>=365 && quahan3==1){
+	if(daysDifference(quahan1,today)>=60 && quahan3==1){
 	firebase.child("bh").child(childSnapshot.key()).remove();
 	Load();
 	}
